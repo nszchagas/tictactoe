@@ -1,0 +1,22 @@
+<div id="root"> 
+
+<p *ngIf="!winner">
+   Current player: {{player}}   
+</p>
+<p *ngIf="winner">
+    Winner: {{winner}}
+</p> 
+
+<button (click) = "reset()"> Restart </button> 
+
+<div> <br>
+<table> 
+    <tr *ngFor="let row of [0, 1, 2]">
+        <td *ngFor="let col of [0, 1, 2]" (click)="cellClick(row,col)"> {{table[row][col]}} </td>
+    </tr> 
+
+
+</table>
+</div>
+
+</div>
